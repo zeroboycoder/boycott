@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 import "./Toolbar.css";
 import { Container, Typography } from "@material-ui/core";
 
@@ -8,7 +9,9 @@ class Toolbar extends Component {
          <nav className="Toolbar">
             <Container maxWidth="lg">
                <Typography variant="h1" className="Toolbar__Brand">
-                  Boycott
+                  <span onClick={() => this.props.history.push("/")}>
+                     Boycott
+                  </span>
                </Typography>
             </Container>
          </nav>
@@ -16,4 +19,4 @@ class Toolbar extends Component {
    }
 }
 
-export default Toolbar;
+export default withRouter(Toolbar);

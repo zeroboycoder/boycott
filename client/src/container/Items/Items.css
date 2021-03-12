@@ -1,0 +1,23 @@
+.Items {
+   padding-top: 1px; /* Title ရဲ့ margin အလုပ်လုပ်အောင် ဇတိ သဘောမျိုး ပေးခြင်းဖြစ် */
+}
+
+/* Category Title */
+.Items__CateTitle {
+   color: #333;
+   font: 400 42px var(--fontFamily);
+   width: -webkit-fit-content;
+   width: -moz-fit-content;
+   width: fit-content;
+   margin: 15px auto 30px auto;
+   padding-bottom: 3px;
+   letter-spacing: 0.5px;
+   word-spacing: 3px;
+   text-transform: capitalize;
+   border-bottom: 5px dotted var(--primary);
+}
+
+/* Left Categories Box */
+.Items__CateBox {
+   position: fixed;
+}

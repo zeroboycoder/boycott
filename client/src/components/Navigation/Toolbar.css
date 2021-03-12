@@ -14,4 +14,5 @@ h1.Toolbar__Brand {
    color: var(--primary);
    font: 600 30px var(--fontFamily);
    letter-spacing: 0.5px;
+   cursor: pointer;
 }

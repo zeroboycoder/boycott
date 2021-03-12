@@ -1,0 +1,39 @@
+.ItemBox {
+   display: flex;
+   align-items: center;
+   width: 100%;
+   padding: 5px 10px;
+   margin: 20px 0;
+   background-color: #efefef;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: all 0.3s;
+}
+
+.ItemBox:hover,
+.ItemBox:hover {
+   background-color: #ddd;
+}
+
+.ItemBox:first-of-type {
+   margin-top: 0;
+}
+
+/* Item's Image */
+.ItemImg {
+   width: 80px;
+   height: 65px;
+}
+
+.ItemImg img {
+   width: 100%;
+   height: 100%;
+   border-radius: 10px;
+}
+
+/* Item's Name */
+.ItemName {
+   margin: 0 20px;
+   font: 600 22px var(--fontFamily);
+   letter-spacing: 0.5px;
+}

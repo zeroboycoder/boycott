@@ -3,12 +3,13 @@ import { Container, Grid } from "@material-ui/core";
 import {
    CommuteOutlined,
    FastfoodOutlined,
+   LocalGroceryStoreOutlined,
    FavoriteBorderOutlined,
    EmojiTransportationOutlined,
    LocalDrinkOutlined,
 } from "@material-ui/icons";
 import "./Home.css";
-import CategoryBox from "../../components/CateBox/CateBox";
+import CategoryBox from "../../components/CateBox_home/CateBox";
 
 class Home extends Component {
    goToItemPage = (path) => {
@@ -19,60 +20,70 @@ class Home extends Component {
       // Products Lists
       const products = [
          {
-            name: "Transportation",
+            name: "Transportation & Communication",
             icon: (
                <CommuteOutlined
                   color="secondary"
                   style={{ fontSize: 80, marginBottom: 30 }}
                />
             ),
-            path: "/transportation",
+            path: "/transportation_&_communication",
          },
          {
-            name: "Food, Drink and Utility",
+            name: "Food & Beverage",
             icon: (
                <FastfoodOutlined
                   color="secondary"
                   style={{ fontSize: 80, marginBottom: 30 }}
                />
             ),
-            path: "/food",
+            path: "/food_&_beverage",
          },
          {
-            name: "Health Service",
+            name: "Grocery Accessories",
+            icon: (
+               <LocalGroceryStoreOutlined
+                  color="secondary"
+                  style={{ fontSize: 80, marginBottom: 30 }}
+               />
+            ),
+            path: "/grocery_accessories",
+         },
+         {
+            name: "Health Care Service",
             icon: (
                <FavoriteBorderOutlined
                   color="secondary"
                   style={{ fontSize: 80, marginBottom: 30 }}
                />
             ),
-            path: "/health",
+            path: "/health_care_service",
          },
          {
-            name: "Hotal and Tourism",
+            name: "Hotel and Tourism",
             icon: (
                <EmojiTransportationOutlined
                   color="secondary"
                   style={{ fontSize: 80, marginBottom: 30 }}
                />
             ),
-            path: "tourism",
+            path: "hotel_&_tourism",
          },
          {
-            name: "Oils and Other",
+            name: "Petrol, Oil & Others",
             icon: (
                <LocalDrinkOutlined
                   color="secondary"
                   style={{ fontSize: 80, marginBottom: 30 }}
                />
             ),
-            path: "oilandother",
+            path: "petrol_oil_&_others",
          },
       ];
 
       // Loop the product and create Box
       const Boxs = products.map((product) => (
-         <Grid item>
+         <Grid item key={product.name}>
             <CategoryBox
                name={product.name}
                icon={product.icon}
