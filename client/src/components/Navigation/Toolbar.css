@@ -14,5 +14,27 @@ h1.Toolbar__Brand {
    color: var(--primary);
    font: 600 30px var(--fontFamily);
    letter-spacing: 0.5px;
+}
+
+h1.Toolbar__Brand span {
    cursor: pointer;
+}
+
+/* Authentication Buttons */
+.Toolbar__Auth button {
+   background-color: #00000000;
+   outline: none;
+   border: none;
+   height: 56px;
+   padding: 0 20px;
+   color: var(--primary);
+   font: 600 17px var(--fontFamily);
+   letter-spacing: 0.5px;
+   transition: all 0.3s;
+   cursor: pointer;
+}
+
+.Toolbar__Auth button:hover,
+.Toolbar__Auth button:active {
+   background-color: #ddd;
 }

@@ -30,7 +30,7 @@ class Items extends Component {
          },
          {
             name: "Petrol, Oil & Others",
-            path: "petrol_oil_&_others",
+            path: "petrol,_oil_&_others",
          },
       ],
    };
@@ -49,10 +49,12 @@ class Items extends Component {
 
    render() {
       // Configure the Category Box
+      const cateName = this.props.match.params.category.split("_").join(" ");
       const configCateBox = this.state.categories.map((category) => {
          return (
             <CategoryBox
                key={category.name}
+               active={category.name.toLowerCase() === cateName}
                name={category.name}
                path={category.path}
             />
@@ -60,15 +62,15 @@ class Items extends Component {
       });
 
       // Configure the Item Box
-      const itemBox = <ItemBox />;
+      const itemBox = <ItemBox params={this.props.match.params.category} />;
 
       // Create the Category boxes And Item Boxes
       const cateAndItem = (
          <Grid container>
-            <Grid item sm={0} md={4}>
+            <Grid item md={4}>
                <div className="Items__CateBox">{configCateBox}</div>
             </Grid>
-            <Grid item sm={12} md={8}>
+            <Grid item xs md={8}>
                {itemBox}
                {itemBox}
                {itemBox}

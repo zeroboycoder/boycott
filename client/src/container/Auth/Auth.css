@@ -1,0 +1,61 @@
+.Auth__Form {
+   display: flex;
+   flex-flow: column;
+   justify-content: center;
+   align-items: center;
+   margin: 0 auto;
+   width: 75%;
+   height: calc(100vh - 100px);
+}
+
+.Auth__Title {
+   color: var(--text);
+   font: 600 36px var(--fontFamily);
+   margin-bottom: 10px;
+   letter-spacing: 0.5px;
+   transition: all 1s;
+}
+
+.Auth__Title::after {
+   display: block;
+   content: "";
+   width: 220px;
+   height: 2px;
+   margin: 7px auto;
+   border: none;
+   border-bottom: 5px dotted var(--primary);
+}
+
+.Auth__Form div {
+   width: 100%;
+   margin: 10px 0;
+}
+
+.Auth__Form div label {
+   font: 400 16px var(--fontFamily);
+}
+
+.Auth__Form div input {
+   color: var(--text);
+   font: 400 16px var(--fontFamily);
+   padding: 15px 12px;
+}
+
+button.Auth__Btn {
+   width: 100%;
+   text-transform: none;
+   margin: 20px 0;
+   color: var(--text);
+   font: 400 18px var(--fontFamily);
+}
+
+.SwitchAuthBtn {
+   font: 400 14px var(--fontFamily);
+   letter-spacing: 0.5px;
+}
+
+.SwitchAuthBtn span {
+   font-weight: 600;
+   color: var(--primary);
+   cursor: pointer;
+}

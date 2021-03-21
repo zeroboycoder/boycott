@@ -1,20 +1,19 @@
+import { withRouter } from "react-router-dom";
 import "./ItemBox.css";
-import Img from "../../assets/mytel.png";
+import Logo from "../../assets/mytel.png";
 
 const ItemBox = (props) => {
+   const goToItemDetail = () => {
+      props.history.push(`/${props.params}/abcdef`);
+   };
    return (
-      <div className="ItemBox">
+      <div className="ItemBox" onClick={goToItemDetail}>
          <div className="ItemImg">
-            <img src={Img} alt="Mytel" />
+            <img src={Logo} alt="Mytel" />
          </div>
          <div className="ItemName">Mytel</div>
       </div>
    );
 };
 
-ItemBox.propTypes = {
-   img: String,
-   name: String,
-};
-
-export default ItemBox;
+export default withRouter(ItemBox);

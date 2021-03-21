@@ -7,7 +7,10 @@ const CategoryBox = (props) => {
    };
 
    return (
-      <div className="CategoryBox" onClick={() => goToCategory(props.path)}>
+      <div
+         className={`CategoryBox ${props.active ? "active" : null}`}
+         onClick={() => goToCategory(props.path)}
+      >
          <p>{props.name}</p>
       </div>
    );

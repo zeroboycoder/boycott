@@ -77,7 +77,7 @@ class Home extends Component {
                   style={{ fontSize: 80, marginBottom: 30 }}
                />
             ),
-            path: "petrol_oil_&_others",
+            path: "petrol,_oil_&_others",
          },
       ];
 

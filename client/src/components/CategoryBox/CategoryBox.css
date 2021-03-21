@@ -10,7 +10,8 @@
 }
 
 .CategoryBox:hover,
-.CategoryBox:active {
+.CategoryBox:active,
+.CategoryBox.active {
    color: #fff;
    background-color: var(--primary);
 }
